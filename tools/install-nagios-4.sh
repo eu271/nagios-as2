@@ -36,7 +36,7 @@ DIR_NAGIOS_PLUGINS=$(echo ${FILE_NAGIOS_PLUGINS}| cut -d. -f1,2)
 
 #Instala todas las librerias y extras para el funcionamiento de nagios como servidor
 #Ademas tambien añade todo lo necesario para la configuracion y funcionamiento CGI
-apt-get install -y wget build-essential apache2 libgd2-xpm-dev libapache2-mod-php5 gcc
+apt-get install -y wget build-essential apache2 libgd2-xpm-dev libapache2-mod-php5
 
 #Añade los usuarios pertinentes para el funcionamiento de nagios ademas de los grupos
 #para compartir permisos.
@@ -58,7 +58,7 @@ tar zxvf $FILE_NAGIOS_PLUGINS
 #Instalacion de nagios
 cd $DIR_NAGIOS_CORE
 
-./configure --with-nagios-group=nagios --with-command-group=nagcmd -–with-mail=/usr/bin/sendmail
+./configure --with-nagios-group=nagios --with-command-group=nagcmd 
 
 make all
 make install
