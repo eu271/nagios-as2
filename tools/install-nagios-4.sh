@@ -22,6 +22,8 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
+#Instalacion de nagios en maquina servidor para la monitorizacion.
+
 #Las url estan aqui, para una posible actualizacion a versiones siguientes, notese
 #que el proceso de instalacion podria cambiar y cambios adicionales tendrian que 
 #hacerse.
