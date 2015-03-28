@@ -36,7 +36,7 @@ DIR_NAGIOS_PLUGINS=$(echo ${FILE_NAGIOS_PLUGINS}| cut -d. -f1,2)
 
 #Instala todas las librerias y extras para el funcionamiento de nagios como servidor
 #Ademas tambien añade todo lo necesario para la configuracion y funcionamiento CGI
-apt-get install -y wget build-essential apache2 php5-gd libgd2-xpm libgd2-xpm-dev libapache2-modphp5
+apt-get install -y wget build-essential apache2 libgd2-xpm-dev libapache2-mod-php5 gcc
 
 #Añade los usuarios pertinentes para el funcionamiento de nagios ademas de los grupos
 #para compartir permisos.
