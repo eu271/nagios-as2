@@ -26,9 +26,11 @@
 
 URL_NRPE="http://kent.dl.sourceforge.net/project/nagios/nrpe-2.x/nrpe-2.15/nrpe-2.15.tar.gz"
 
-FILE_NRPE=$(echo ${URL_NRPE}| cut -d/ -f5)
+FILE_NRPE=$(echo ${URL_NRPE}| cut -d/ -f8)
 
 DIR_NRPE=$(echo ${FILE_NRPE}| cut -d. -f1,2)
+
+apt-get install libssl-dev
 
 mkdir -p /usr/local/src/nrpe
 cd /usr/local/src/nrpe
@@ -37,4 +39,10 @@ wget $URL_NRPE
 tar -xf $FILE_NRPE
 cd $DIR_NRPE
 
+#Puede variar donde esa la libreria openssl
+# EN ubuntu: apt-file search libssl | grep libssl-dev
+#  para buscar donde esta la libreria.
 ./configure --with-ssl=/usr/bin/openssl --with-ssl-lib=/usr/lib/x86_64-linux-gnu
+
+make all
+make install
